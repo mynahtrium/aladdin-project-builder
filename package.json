@@ -1,0 +1,35 @@
+{
+  "name": "ai-project-builder",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "clsx": "^2.1.1",
+    "dotenv": "^17.2.4",
+    "framer-motion": "^12.33.0",
+    "lucide-react": "^0.563.0",
+    "next": "16.1.6",
+    "papaparse": "^5.5.3",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "react-markdown": "^10.1.0",
+    "react-syntax-highlighter": "^16.1.0",
+    "rehype-raw": "^7.0.0",
+    "remark-gfm": "^4.0.1",
+    "tailwind-merge": "^3.4.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/papaparse": "^5.5.2",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@types/react-syntax-highlighter": "^15.5.13",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}

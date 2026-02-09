@@ -1,0 +1,54 @@
+{
+  "settings": {
+    "title": "Settings",
+    "appearance": {
+      "title": "Appearance",
+      "description": "Customize the look and feel of the application.",
+      "light": "Light",
+      "dark": "Dark",
+      "system": "System"
+    },
+    "general": {
+      "title": "General",
+      "description": "Manage your language and preferences.",
+      "language": {
+        "title": "Language",
+        "description": "Select your preferred language"
+      }
+    },
+    "reset": "Reset to Defaults"
+  },
+  "nav": {
+    "chat": "Chat",
+    "data": "Data",
+    "settings": "Settings"
+  },
+  "chat": {
+    "placeholder": "Send a message to Aladdin AI...",
+    "deepThinking": "Deep Thinking Mode Enabled...",
+    "welcome": "Hello! I'm your AI Research Assistant. To start, what is your research hypothesis?",
+    "error": "Sorry, I encountered an error processing your request.",
+    "ready": "Ready to explore scientific simulations.",
+    "thinking": "Thinking...",
+    "disclaimer": "AI Project Builder can make mistakes. Please verify generated scientific prompts.",
+    "reset": "Reset Chat",
+    "deepThinkingTitle": "Deep Thinking (Simulation)",
+    "attachFile": "Attach Text File"
+  },
+  "data": {
+    "title": "Data Analysis Workspace",
+    "description": "Upload and visualize your experimental data from Aladdin."
+  },
+  "csv": {
+    "title": "Experimental Data Analysis",
+    "uploadButton": "Upload Aladdin CSV Export",
+    "showingRows": "Showing first 5 rows of {count} entries"
+  },
+  "launcher": {
+    "title": "🚀 Ready for Aladdin",
+    "description": "Your project prompt is ready. Copy it and paste it into Aladdin's AI input.",
+    "copy": "Copy",
+    "copied": "Copied",
+    "openButton": "Open Aladdin Platform"
+  }
+}

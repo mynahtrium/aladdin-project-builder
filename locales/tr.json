@@ -1,0 +1,54 @@
+{
+  "settings": {
+    "title": "Ayarlar",
+    "appearance": {
+      "title": "Görünüm",
+      "description": "Uygulamanın görünümünü ve hissini özelleştirin.",
+      "light": "Açık",
+      "dark": "Koyu",
+      "system": "Sistem"
+    },
+    "general": {
+      "title": "Genel",
+      "description": "Dil ve tercihlerinizi yönetin.",
+      "language": {
+        "title": "Dil",
+        "description": "Tercih ettiğiniz dili seçin"
+      }
+    },
+    "reset": "Varsayılanlara Sıfırla"
+  },
+  "nav": {
+    "chat": "Sohbet",
+    "data": "Veri",
+    "settings": "Ayarlar"
+  },
+  "chat": {
+    "placeholder": "Aladdin AI'ya bir mesaj gönderin...",
+    "deepThinking": "Derin Düşünme Modu Etkin...",
+    "welcome": "Merhaba! Ben Yapay Zeka Araştırma Asistanınızım. Başlamak için araştırma hipoteziniz nedir?",
+    "error": "Üzgünüm, isteğinizi işlerken bir hatayla karşılaştım.",
+    "ready": "Bilimsel simülasyonları keşfetmeye hazır.",
+    "thinking": "Düşünüyor...",
+    "disclaimer": "AI Proje Oluşturucu hatalar yapabilir. Lütfen oluşturulan bilimsel istemleri doğrulayın.",
+    "reset": "Sohbeti Sıfırla",
+    "deepThinkingTitle": "Derin Düşünme (Simülasyon)",
+    "attachFile": "Metin Dosyası Ekle"
+  },
+  "data": {
+    "title": "Veri Analiz Çalışma Alanı",
+    "description": "Aladdin'den deneysel verilerinizi yükleyin ve görselleştirin."
+  },
+  "csv": {
+    "title": "Deneysel Veri Analizi",
+    "uploadButton": "Aladdin CSV Dışa Aktarımı Yükle",
+    "showingRows": "{count} girdinin ilk 5 satırı gösteriliyor"
+  },
+  "launcher": {
+    "title": "🚀 Aladdin için Hazır",
+    "description": "Proje isteminiz hazır. Kopyalayın ve Aladdin'in Yapay Zeka girdisine yapıştırın.",
+    "copy": "Kopyala",
+    "copied": "Kopyalandı",
+    "openButton": "Aladdin Platformunu Aç"
+  }
+}
