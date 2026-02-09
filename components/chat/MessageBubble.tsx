@@ -6,7 +6,7 @@ import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { cn } from '@/lib/utils';
 
 interface MessageBubbleProps {
-  role: 'user' | 'assistant';
+  role: string;
   content: string;
 }
 
@@ -17,10 +17,10 @@ export const MessageBubble: React.FC<MessageBubbleProps> = ({ role, content }) =
       role === 'user' ? "flex-row-reverse" : "flex-row"
     )}>
       <div className={cn(
-        "flex h-8 w-8 shrink-0 items-center justify-center rounded-full border",
+        "flex h-8 w-8 shrink-0 items-center justify-center rounded-full border shadow-sm",
         role === 'user' 
-          ? "bg-blue-600 border-blue-600 text-white" 
-          : "bg-emerald-600 border-emerald-600 text-white"
+          ? "bg-primary border-primary text-primary-foreground" 
+          : "bg-purple-600 border-purple-600 text-white"
       )}>
         {role === 'user' ? <User size={16} /> : <Bot size={16} />}
       </div>
@@ -32,10 +32,10 @@ export const MessageBubble: React.FC<MessageBubbleProps> = ({ role, content }) =
           : "items-start"
       )}>
         <div className={cn(
-          "rounded-2xl px-5 py-3 shadow-sm",
+          "rounded-2xl px-5 py-3 shadow-md backdrop-blur-sm",
           role === 'user' 
-            ? "bg-blue-600 text-white" 
-            : "bg-[#2c2c2e] text-gray-100 border border-gray-700/50"
+            ? "bg-primary text-primary-foreground" 
+            : "bg-card/90 text-card-foreground border border-white/10"
         )}>
           {role === 'user' ? (
             <div className="whitespace-pre-wrap">{content}</div>
@@ -47,8 +47,8 @@ export const MessageBubble: React.FC<MessageBubbleProps> = ({ role, content }) =
                   code({node, inline, className, children, ...props}: any) {
                     const match = /language-(\w+)/.exec(className || '')
                     return !inline && match ? (
-                    <div className="rounded-md overflow-hidden my-4 border border-gray-700">
-                      <div className="bg-[#1e1e1e] px-4 py-2 text-xs text-gray-400 border-b border-gray-700 flex justify-between items-center">
+                    <div className="rounded-md overflow-hidden my-4 border border-white/10 shadow-sm">
+                      <div className="bg-muted/50 px-4 py-2 text-xs text-muted-foreground border-b border-white/10 flex justify-between items-center backdrop-blur-md">
                         <span>{match[1]}</span>
                       </div>
                       <SyntaxHighlighter
@@ -56,19 +56,19 @@ export const MessageBubble: React.FC<MessageBubbleProps> = ({ role, content }) =
                         style={vscDarkPlus}
                         language={match[1]}
                         PreTag="div"
-                        customStyle={{ margin: 0, padding: '1rem', background: '#1e1e1e' }}
+                        customStyle={{ margin: 0, padding: '1rem', background: 'rgba(0,0,0,0.4)' }}
                       >
                         {String(children).replace(/\n$/, '')}
                       </SyntaxHighlighter>
                     </div>
                   ) : (
-                    <code {...props} className={cn("bg-gray-800 px-1.5 py-0.5 rounded text-sm text-blue-200 font-mono", className)}>
+                    <code {...props} className={cn("bg-muted/50 px-1.5 py-0.5 rounded text-sm text-primary-foreground/80 font-mono border border-white/10", className)}>
                       {children}
                     </code>
                   )
                 },
                 a: ({ node, ...props }) => (
-                  <a {...props} className="text-blue-400 hover:text-blue-300 underline underline-offset-4" target="_blank" rel="noopener noreferrer" />
+                  <a {...props} className="text-primary hover:text-primary/80 underline underline-offset-4 transition-colors" target="_blank" rel="noopener noreferrer" />
                 ),
                 ul: ({ node, ...props }) => (
                   <ul {...props} className="list-disc pl-4 space-y-1 my-2" />
@@ -80,7 +80,7 @@ export const MessageBubble: React.FC<MessageBubbleProps> = ({ role, content }) =
                   <li {...props} className="pl-1" />
                 ),
                 h1: ({ node, ...props }) => (
-                  <h1 {...props} className="text-2xl font-bold mt-6 mb-4 pb-2 border-b border-gray-700" />
+                  <h1 {...props} className="text-2xl font-bold mt-6 mb-4 pb-2 border-b border-white/10" />
                 ),
                 h2: ({ node, ...props }) => (
                   <h2 {...props} className="text-xl font-bold mt-5 mb-3" />
@@ -92,12 +92,12 @@ export const MessageBubble: React.FC<MessageBubbleProps> = ({ role, content }) =
                   <p {...props} className="mb-4 last:mb-0" />
                 ),
                 table: ({ node, ...props }) => (
-                  <div className="overflow-x-auto my-4 border border-gray-700 rounded-lg">
+                  <div className="overflow-x-auto my-4 border border-white/10 rounded-lg">
                     <table {...props} className="w-full text-left text-sm" />
                   </div>
                 ),
                 thead: ({ node, ...props }) => (
-                  <thead {...props} className="bg-gray-800/50 text-gray-200" />
+                  <thead {...props} className="bg-muted/50 text-foreground" />
                 ),
                 tbody: ({ node, ...props }) => (
                   <tbody {...props} className="divide-y divide-gray-700" />
